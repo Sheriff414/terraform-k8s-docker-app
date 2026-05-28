@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo App • Terraform + K8s</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        li { margin: 8px 0; }
+    </style>
+</head>
+<body>
+    <h1>🚀 Ahmed Sheriffdeen's Todo App on Kubernetes</h1>
+    <p><strong>Pod:</strong> {{ pod_name }}</p>
+    <form action="/add" method="post">
+        <input type="text" name="todo" placeholder="New task..." required>
+        <button type="submit">Add</button>
+    </form>
+    <h2>Your Todos ({{ todos|length }})</h2>
+    <ul>
+        {% for todo in todos %}
+        <li>{{ todo }} <a href="/delete/{{ loop.index0 }}">🗑️ Delete</a></li>
+        {% endfor %}
+    </ul>
+    <p><small>Replicas: 3 • Data is per-pod (demo purpose)</small></p>
+</body>
+</html>

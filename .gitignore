@@ -1,0 +1,19 @@
+# Terraform local state and binaries
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+.terraform.lock.hcl
+
+# Python cache and environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+env/
+
+# Operating system files
+.DS_Store
+Thumbs.db
