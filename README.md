@@ -45,5 +45,8 @@ Navigate to the terraform directory and initialize the provider:
 cd ../terraform
 terraform init
 terraform plan
+
+
+### 4. For kubernetes, use the docker default kubernetes cluster or use minikube or external kubernetes cluster you have.
 terraform apply
 ```
